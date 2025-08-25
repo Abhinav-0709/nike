@@ -1,0 +1,1329 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #111111;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 0.9;
+    color: #111111;
+    font-family: 'Bebas Neue', sans-serif;
+    position: relative;
+}
+
+/* Loading Screen */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 0.8s ease;
+}
+
+.nike-logo-container {
+    text-align: center;
+}
+
+.nike-swoosh {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 2rem;
+}
+
+.swoosh-path {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    stroke-width: 1;
+}
+
+.loading-text {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.2em;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nike-logo {
+    fill: #111111;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #111111;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #111111;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #111111;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 50%, #f0f0f0 100%);
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.color-drip {
+    position: absolute;
+    width: 200px;
+    border-radius: 0 0 100px 100px;
+    opacity: 0;
+    transform: translateY(-100px);
+}
+
+.drip-1 {
+    top: -100px;
+    right: 15%;
+    height: 300px;
+    background: linear-gradient(180deg, transparent 0%, rgba(220, 38, 127, 0.7) 100%);
+}
+
+.drip-2 {
+    top: -50px;
+    right: 30%;
+    height: 250px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 122, 255, 0.6) 100%);
+}
+
+.drip-3 {
+    top: -80px;
+    right: 45%;
+    height: 280px;
+    background: linear-gradient(180deg, transparent 0%, rgba(52, 199, 89, 0.7) 100%);
+}
+
+.drip-4 {
+    top: -120px;
+    right: 60%;
+    height: 320px;
+    background: linear-gradient(180deg, transparent 0%, rgba(255, 149, 0, 0.8) 100%);
+}
+
+.hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.performance-tag {
+    display: inline-block;
+    background: #111111;
+    color: #ffffff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.85;
+    margin-bottom: 2rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: -0.02em;
+}
+
+.title-word {
+    display: block;
+}
+
+.highlight {
+    background: linear-gradient(45deg, #dc267f, #007aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    margin-bottom: 3rem;
+}
+
+.subtitle-line {
+    display: block;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #666666;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: #111111;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #333333;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(17, 17, 17, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #111111;
+    border: 2px solid #111111;
+}
+
+.btn-secondary:hover {
+    background: #111111;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Hero Visual */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.jordan-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+}
+
+.main-jordan {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.shoe-3d {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.jordan-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    filter: drop-shadow(0 30px 60px rgba(220, 38, 127, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.shoe-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.performance-stats {
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    padding: 1rem 1.2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    min-width: 80px;
+}
+
+.stat-number {
+    display: block;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 900;
+    color: #dc267f;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    color: #666666;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Floating Elements */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.float-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+}
+
+.circle-1 {
+    width: 100px;
+    height: 100px;
+    background: #dc267f;
+    top: 20%;
+    left: 10%;
+}
+
+.circle-2 {
+    width: 60px;
+    height: 60px;
+    background: #007aff;
+    top: 60%;
+    right: 15%;
+}
+
+.circle-3 {
+    width: 80px;
+    height: 80px;
+    background: #34c759;
+    bottom: 20%;
+    left: 20%;
+}
+
+/* Container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Section Tags */
+.section-tag {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #111111;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #666666;
+    margin-top: 1.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Jordan Collection */
+.jordans {
+    padding: 6rem 0;
+    background: #ffffff;
+}
+
+.jordans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.jordan-card {
+    background: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    position: relative;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.jordan-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.shoe-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.jordan-card:hover .shoe-image {
+    transform: scale(1.1);
+}
+
+.card-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(17, 17, 17, 0.9);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.color-splash {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    opacity: 0.6;
+}
+
+.splash-red {
+    background: linear-gradient(90deg, transparent 0%, rgba(220, 38, 127, 0.7) 100%);
+}
+
+.splash-blue {
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 122, 255, 0.7) 100%);
+}
+
+.splash-green {
+    background: linear-gradient(90deg, transparent 0%, rgba(52, 199, 89, 0.7) 100%);
+}
+
+.card-info {
+    padding: 2rem 1.5rem;
+}
+
+.card-info h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    margin-bottom: 1rem;
+    color: #111111;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.card-info p {
+    color: #666666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.price-tech {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.price {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 900;
+    color: #111111;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.tech {
+    background: #f0f0f0;
+    color: #111111;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Innovation Section */
+.innovation {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+}
+
+.innovation-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.innovation-desc {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #666666;
+    margin-bottom: 3rem;
+    line-height: 1.7;
+}
+
+.tech-features {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.tech-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.tech-icon {
+    font-size: 2rem;
+    background: linear-gradient(135deg, #dc267f, #007aff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    min-width: 60px;
+}
+
+.tech-content h4 {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: #111111;
+    margin-bottom: 0.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.tech-content p {
+    color: #666666;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.innovation-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-showcase {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+}
+
+.showcase-shoe {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(17, 17, 17, 0.3);
+}
+
+.tech-shoe-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.tech-layers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.layer {
+    position: absolute;
+    border-radius: 30px;
+    opacity: 0.3;
+}
+
+.layer-1 {
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: linear-gradient(45deg, #dc267f, transparent);
+}
+
+.layer-2 {
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    background: linear-gradient(45deg, #007aff, transparent);
+}
+
+.layer-3 {
+    top: 60px;
+    left: 60px;
+    right: 60px;
+    bottom: 60px;
+    background: linear-gradient(45deg, #34c759, transparent);
+}
+
+/* Performance Section */
+.performance {
+    padding: 6rem 0;
+    background: #ffffff;
+}
+
+.performance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.performance-card {
+    background: #f8f8f8;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.performance-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+}
+
+.athlete-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.athlete-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.performance-content {
+    padding: 2rem 1.5rem;
+}
+
+.performance-content blockquote {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    color: #333333;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.athlete-info h4 {
+    color: #111111;
+    margin-bottom: 0.3rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.athlete-info span {
+    color: #666666;
+    font-size: 0.9rem;
+}
+
+.performance-metrics {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.metric {
+    text-align: center;
+    min-width: 80px;
+}
+
+.metric-value {
+    display: block;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: 900;
+    color: #dc267f;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.metric-label {
+    font-size: 0.7rem;
+    color: #666666;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* About Section */
+.about {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #111111 0%, #333333 100%);
+    color: #ffffff;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about .section-title {
+    color: #ffffff;
+}
+
+.about-text p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: #cccccc;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.nike-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 4rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.nike-stat {
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+}
+
+.nike-stat .stat-number {
+    display: block;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #dc267f;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 900;
+}
+
+.nike-stat .stat-label {
+    font-size: 0.8rem;
+    color: #999999;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.legacy-timeline {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 25px;
+    padding: 2rem 1.5rem;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-item:last-child {
+    border-bottom: none;
+}
+
+.timeline-year {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 900;
+    color: #dc267f;
+    font-family: 'Bebas Neue', sans-serif;
+    min-width: 80px;
+}
+
+.timeline-content h4 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.timeline-content p {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+/* Newsletter */
+.newsletter {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #dc267f, #007aff);
+    color: #ffffff;
+    text-align: center;
+}
+
+.newsletter-content h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.newsletter-content p {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.newsletter-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 1.2rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.newsletter-btn {
+    padding: 1.2rem 2.5rem;
+    background: #111111;
+    color: #ffffff;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.newsletter-btn:hover {
+    background: #333333;
+    transform: translateY(-2px);
+}
+
+/* Contact Section */
+.contact {
+    padding: 6rem 0;
+    background: #ffffff;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-details {
+    margin-top: 3rem;
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    min-width: 40px;
+    text-align: center;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label {
+    font-size: 0.8rem;
+    color: #dc267f;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.contact-value {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    color: #111111;
+    font-weight: 500;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    padding: 1.2rem 1.5rem;
+    border: 2px solid #f0f0f0;
+    border-radius: 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    border-color: #dc267f;
+    box-shadow: 0 0 0 3px rgba(220, 38, 127, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-btn {
+    padding: 1.2rem 2.5rem;
+    background: #111111;
+    color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.form-btn:hover {
+    background: #333333;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(17, 17, 17, 0.2);
+}
+
+/* Footer */
+.footer {
+    background: #111111;
+    color: #ffffff;
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-logo .nike-logo {
+    fill: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.footer-section p {
+    color: #cccccc;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link a {
+    /* width: 45px;
+    height: 45px; */
+    /* background: #333333; */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border-radius: 50%; */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+
+
+.footer-section h4 {
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.footer-section a {
+    color: #cccccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #dc267f;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333333;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #dc267f;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .innovation-content,
+    .about-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .performance-stats {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .jordans-grid,
+    .performance-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .color-drip {
+        width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(20px);
+        padding: 3rem 0;
+        gap: 2rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 120px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .newsletter-input {
+        min-width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .nike-stats {
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .performance-metrics {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .color-drip {
+        width: 120px;
+    }
+
+    .jordans-grid,
+    .performance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .nav-container {
+        padding: 0 1rem;
+    }
+
+    .hero-container {
+        padding: 0 1rem;
+    }
+
+    .performance-stats {
+        gap: 1rem;
+    }
+
+    .stat-item {
+        padding: 0.8rem;
+        min-width: 70px;
+    }
+
+    .card-info,
+    .performance-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .legacy-timeline {
+        padding: 1.5rem 1rem;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .timeline-year {
+        min-width: auto;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #dc267f, #007aff);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #007aff, #dc267f);
+}
+
+/* Selection */
+::selection {
+    background: #dc267f;
+    color: #ffffff;
+}

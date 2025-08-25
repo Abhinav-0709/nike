@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike - Just Do It</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="loader" id="loader">
+        <div class="nike-logo-container">
+            <div class="nike-swoosh">
+                <svg width="120" height="120" viewBox="135.5 361.38 1000 356.39" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M245.8075 717.62406c-29.79588-1.1837-54.1734-9.3368-73.23459-24.4796-3.63775-2.8928-12.30611-11.5663-15.21427-15.2245-7.72958-9.7193-12.98467-19.1785-16.48977-29.6734-10.7857-32.3061-5.23469-74.6989 15.87753-121.2243 18.0765-39.8316 45.96932-79.3366 94.63252-134.0508 7.16836-8.0511 28.51526-31.5969 28.65302-31.5969.051 0-1.11225 2.0153-2.57652 4.4694-12.65304 21.1938-23.47957 46.158-29.37751 67.7703-9.47448 34.6785-8.33163 64.4387 3.34693 87.5151 8.05611 15.898 21.86731 29.6684 37.3979 37.2806 27.18874 13.3214 66.9948 14.4235 115.60699 3.2245 3.34694-.7755 169.19363-44.801 368.55048-97.8366 199.35686-53.0408 362.49439-96.4029 362.51989-96.3672.056.046-463.16259 198.2599-703.62654 301.0914-38.08158 16.2806-48.26521 20.3928-66.16827 26.6785-45.76525 16.0714-86.76008 23.7398-119.89779 22.4235z"
+                        fill="white" class="swoosh-path" />
+                </svg>
+
+            </div>
+            <div class="loading-text">NIKE</div>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <svg width="60" height="21" viewBox="135.5 361.38 1000 356.39" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M245.8075 717.62406c-29.79588-1.1837-54.1734-9.3368-73.23459-24.4796-3.63775-2.8928-12.30611-11.5663-15.21427-15.2245-7.72958-9.7193-12.98467-19.1785-16.48977-29.6734-10.7857-32.3061-5.23469-74.6989 15.87753-121.2243 18.0765-39.8316 45.96932-79.3366 94.63252-134.0508 7.16836-8.0511 28.51526-31.5969 28.65302-31.5969.051 0-1.11225 2.0153-2.57652 4.4694-12.65304 21.1938-23.47957 46.158-29.37751 67.7703-9.47448 34.6785-8.33163 64.4387 3.34693 87.5151 8.05611 15.898 21.86731 29.6684 37.3979 37.2806 27.18874 13.3214 66.9948 14.4235 115.60699 3.2245 3.34694-.7755 169.19363-44.801 368.55048-97.8366 199.35686-53.0408 362.49439-96.4029 362.51989-96.3672.056.046-463.16259 198.2599-703.62654 301.0914-38.08158 16.2806-48.26521 20.3928-66.16827 26.6785-45.76525 16.0714-86.76008 23.7398-119.89779 22.4235z"
+                        fill="black" class="swoosh-path" />
+                </svg>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">NEW & FEATURED</a>
+                <a href="#jordans" class="nav-link">JORDAN</a>
+                <a href="#innovation" class="nav-link">INNOVATION</a>
+                <a href="#about" class="nav-link">ABOUT</a>
+                <a href="#contact" class="nav-link">HELP</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="color-drip drip-1"></div>
+            <div class="color-drip drip-2"></div>
+            <div class="color-drip drip-3"></div>
+            <div class="color-drip drip-4"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="performance-tag">PERFORMANCE REDEFINED</div>
+                    <h1 class="hero-title">
+                        <span class="title-word">DEFY</span>
+                        <span class="title-word">GRAVITY</span>
+                        <span class="title-word highlight">WITH</span>
+                        <span class="title-word">JORDAN</span>
+                    </h1>
+                    <div class="hero-subtitle">
+                        <span class="subtitle-line">Revolutionary performance meets iconic design.</span>
+                        <span class="subtitle-line">Experience the future of athletic innovation.</span>
+                    </div>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">SHOP JORDAN</button>
+                        <button class="btn-secondary">EXPLORE TECH</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="jordan-container">
+                        <div class="main-jordan">
+                            <div class="shoe-3d">
+                                <img src="https://images.unsplash.com/photo-1584735175315-9d5df23860e6?w=500&h=400&fit=crop&crop=center"
+                                    alt="Air Jordan" class="jordan-image">
+                                <div class="shoe-glow"></div>
+                            </div>
+                        </div>
+                        <div class="performance-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">35%</span>
+                                <span class="stat-label">MORE BOUNCE</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">50%</span>
+                                <span class="stat-label">LIGHTER</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">PERFORMANCE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Elements -->
+            <div class="floating-elements">
+                <div class="float-circle circle-1"></div>
+                <div class="float-circle circle-2"></div>
+                <div class="float-circle circle-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jordan Collection -->
+    <section id="jordans" class="jordans">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">ICONIC COLLECTION</div>
+                <h2 class="section-title">AIR JORDAN LEGACY</h2>
+                <p class="section-subtitle">Where performance meets legend. Every pair tells a story of greatness.</p>
+            </div>
+            <div class="jordans-grid">
+                <div class="jordan-card featured">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1584735175315-9d5df23860e6?w=400&h=300&fit=crop&crop=center"
+                            alt="Air Jordan 1 Retro High" class="shoe-image">
+                        <div class="card-badge">NEW</div>
+                        <div class="color-splash splash-red"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>AIR JORDAN 1 RETRO HIGH</h3>
+                        <p>The original that started it all. Timeless design, legendary performance.</p>
+                        <div class="price-tech">
+                            <span class="price">$170</span>
+                            <span class="tech">AIR-SOLE UNIT</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="jordan-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=300&fit=crop&crop=center"
+                            alt="Air Jordan 11 Retro" class="shoe-image">
+                        <div class="card-badge">POPULAR</div>
+                        <div class="color-splash splash-blue"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>AIR JORDAN 11 RETRO</h3>
+                        <p>Patent leather luxury with court-ready performance technology.</p>
+                        <div class="price-tech">
+                            <span class="price">$220</span>
+                            <span class="tech">CARBON FIBER</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="jordan-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop&crop=center"
+                            alt="Air Jordan 4 Retro" class="shoe-image">
+                        <div class="card-badge">LIMITED</div>
+                        <div class="color-splash splash-green"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>AIR JORDAN 4 RETRO</h3>
+                        <p>Flight-inspired design with enhanced breathability and support.</p>
+                        <div class="price-tech">
+                            <span class="price">$190</span>
+                            <span class="tech">FLIGHT PLATE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation Section -->
+    <section id="innovation" class="innovation">
+        <div class="container">
+            <div class="innovation-content">
+                <div class="innovation-text">
+                    <div class="section-tag">NIKE INNOVATION</div>
+                    <h2 class="section-title">ENGINEERED FOR GREATNESS</h2>
+                    <p class="innovation-desc">Every Nike innovation is born from the relentless pursuit of athletic
+                        excellence. Our cutting-edge technology doesn't just enhance performance—it redefines what's
+                        possible.</p>
+
+                    <div class="tech-features">
+                        <div class="tech-item">
+                            <div class="tech-icon">⚡</div>
+                            <div class="tech-content">
+                                <h4>AIR MAX TECHNOLOGY</h4>
+                                <p>Revolutionary visible air cushioning that provides maximum impact protection and
+                                    energy return.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">🔥</div>
+                            <div class="tech-content">
+                                <h4>FLYKNIT CONSTRUCTION</h4>
+                                <p>Precision-engineered knit upper delivers targeted support, breathability and stretch
+                                    where you need it most.</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">💎</div>
+                            <div class="tech-content">
+                                <h4>ZOOM AIR UNITS</h4>
+                                <p>Low-profile, responsive cushioning that provides a snappy, energetic feel for
+                                    explosive movements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="innovation-visual">
+                    <div class="tech-showcase">
+                        <div class="showcase-shoe">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop&crop=center"
+                                alt="Nike Technology Showcase" class="tech-shoe-image">
+                            <div class="tech-layers">
+                                <div class="layer layer-1"></div>
+                                <div class="layer layer-2"></div>
+                                <div class="layer layer-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Stories -->
+    <section class="performance">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">ATHLETE STORIES</div>
+                <h2 class="section-title">PERFORMANCE UNLEASHED</h2>
+                <p class="section-subtitle">Real athletes. Real performance. Real results.</p>
+            </div>
+            <div class="performance-grid">
+                <div class="performance-card">
+                    <div class="athlete-image">
+                        <img src="resize.webp" alt="Basketball Player" class="athlete-photo">
+                    </div>
+                    <div class="performance-content">
+                        <blockquote>"The Air Jordan 1s gave me the confidence to push my limits on every play. The
+                            support is unmatched."</blockquote>
+                        <div class="athlete-info">
+                            <h4>Marcus Johnson</h4>
+                            <span>Professional Basketball Player</span>
+                        </div>
+                        <div class="performance-metrics">
+                            <div class="metric">
+                                <span class="metric-value">+15%</span>
+                                <span class="metric-label">Vertical Jump</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">+22%</span>
+                                <span class="metric-label">Court Speed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="performance-card">
+                    <div class="athlete-image">
+                        <img src="images.webp" alt="Female Basketball Player" class="athlete-photo">
+                    </div>
+                    <div class="performance-content">
+                        <blockquote>"Jordan 11s are my game-changers. The traction and comfort help me dominate every
+                            quarter."</blockquote>
+                        <div class="athlete-info">
+                            <h4>Sarah Williams</h4>
+                            <span>College Basketball Star</span>
+                        </div>
+                        <div class="performance-metrics">
+                            <div class="metric">
+                                <span class="metric-value">+18%</span>
+                                <span class="metric-label">Agility</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">+25%</span>
+                                <span class="metric-label">Endurance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="performance-card">
+                    <div class="athlete-image">
+                        <img src="images.jpg" alt="Young Basketball Player" class="athlete-photo">
+                    </div>
+                    <div class="performance-content">
+                        <blockquote>"Training in Jordan 4s transformed my game. The ankle support and cushioning are
+                            revolutionary."</blockquote>
+                        <div class="athlete-info">
+                            <h4>Alex Chen</h4>
+                            <span>Rising Basketball Talent</span>
+                        </div>
+                        <div class="performance-metrics">
+                            <div class="metric">
+                                <span class="metric-value">+20%</span>
+                                <span class="metric-label">Stability</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">+30%</span>
+                                <span class="metric-label">Confidence</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Nike -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-tag">OUR MISSION</div>
+                    <h2 class="section-title">JUST DO IT</h2>
+                    <p>For over 50 years, Nike has been dedicated to inspiring and innovating for every athlete in the
+                        world. We believe that if you have a body, you are an athlete.</p>
+                    <p>Our commitment to performance innovation drives everything we do—from the basketball courts where
+                        Jordan made history to the training facilities where tomorrow's champions are born.</p>
+
+                    <div class="nike-stats">
+                        <div class="nike-stat">
+                            <span class="stat-number">1971</span>
+                            <span class="stat-label">FOUNDED</span>
+                        </div>
+                        <div class="nike-stat">
+                            <span class="stat-number">190+</span>
+                            <span class="stat-label">COUNTRIES</span>
+                        </div>
+                        <div class="nike-stat">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">YEARS OF INNOVATION</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="legacy-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">1985</div>
+                            <div class="timeline-content">
+                                <h4>AIR JORDAN BORN</h4>
+                                <p>The partnership that changed basketball forever</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">1987</div>
+                            <div class="timeline-content">
+                                <h4>AIR MAX REVOLUTION</h4>
+                                <p>Visible air technology transforms athletic footwear</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2025</div>
+                            <div class="timeline-content">
+                                <h4>FUTURE PERFORMANCE</h4>
+                                <p>Continuing to push the boundaries of innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="section-tag">STAY CONNECTED</div>
+                <h2>BE THE FIRST TO KNOW</h2>
+                <p>Get exclusive access to new releases, performance insights, and athlete stories.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input">
+                    <button class="newsletter-btn">JOIN NIKE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="section-tag">GET HELP</div>
+                    <h2 class="section-title">NEED ASSISTANCE?</h2>
+                    <p>Our team is here to help you find the perfect performance footwear and answer any questions.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-text">
+                                <span class="contact-label">VISIT US</span>
+                                <span class="contact-value">Nike Store Locations Worldwide</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">💬</div>
+                            <div class="contact-text">
+                                <span class="contact-label">CHAT</span>
+                                <span class="contact-value">24/7 Customer Support</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-text">
+                                <span class="contact-label">CALL</span>
+                                <span class="contact-value">1-800-NIKE-123</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form class="form">
+                        <input type="text" placeholder="Your Name" class="form-input">
+                        <input type="email" placeholder="Your Email" class="form-input">
+                        <select class="form-select">
+                            <option>Select Topic</option>
+                            <option>Product Question</option>
+                            <option>Size Guide Help</option>
+                            <option>Order Support</option>
+                            <option>General Inquiry</option>
+                        </select>
+                        <textarea placeholder="How can we help you?" class="form-textarea"></textarea>
+                        <button type="submit" class="form-btn">SEND MESSAGE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <svg width="120" height="120" viewBox="135.5 361.38 1000 356.39"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M245.8075 717.62406c-29.79588-1.1837-54.1734-9.3368-73.23459-24.4796-3.63775-2.8928-12.30611-11.5663-15.21427-15.2245-7.72958-9.7193-12.98467-19.1785-16.48977-29.6734-10.7857-32.3061-5.23469-74.6989 15.87753-121.2243 18.0765-39.8316 45.96932-79.3366 94.63252-134.0508 7.16836-8.0511 28.51526-31.5969 28.65302-31.5969.051 0-1.11225 2.0153-2.57652 4.4694-12.65304 21.1938-23.47957 46.158-29.37751 67.7703-9.47448 34.6785-8.33163 64.4387 3.34693 87.5151 8.05611 15.898 21.86731 29.6684 37.3979 37.2806 27.18874 13.3214 66.9948 14.4235 115.60699 3.2245 3.34694-.7755 169.19363-44.801 368.55048-97.8366 199.35686-53.0408 362.49439-96.4029 362.51989-96.3672.056.046-463.16259 198.2599-703.62654 301.0914-38.08158 16.2806-48.26521 20.3928-66.16827 26.6785-45.76525 16.0714-86.76008 23.7398-119.89779 22.4235z"
+                                fill="white" class="swoosh-path" />
+                        </svg>
+                    </div>
+                    <p>Inspiring and innovating for every athlete in the world.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3a5 5 0 1 0 .001 10.001A5 5 0 0 0 12 7zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm4.5-.75a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.4.36a9.06 9.06 0 0 1-2.88 1.1A4.52 4.52 0 0 0 16.11 0c-2.64 0-4.78 2.13-4.78 4.77 0 .37.04.73.11 1.07A12.94 12.94 0 0 1 1.64.88a4.73 4.73 0 0 0-.65 2.4c0 1.66.86 3.13 2.17 3.99A4.41 4.41 0 0 1 .96 7v.06c0 2.32 1.65 4.26 3.84 4.7a4.57 4.57 0 0 1-2.15.08 4.5 4.5 0 0 0 4.21 3.13A9.08 9.08 0 0 1 0 19.54a12.78 12.78 0 0 0 6.92 2.03c8.3 0 12.84-6.87 12.84-12.84 0-.2 0-.41-.01-.61A9.1 9.1 0 0 0 23 3z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.243h-1.918c-1.504 0-1.794.716-1.794 1.764v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.407 24 24 23.407 24 22.676V1.325C24 .593 23.407 0 22.675 0z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M23.498 6.186a2.99 2.99 0 0 0-2.11-2.11C19.731 3.6 12 3.6 12 3.6s-7.731 0-9.388.476a2.99 2.99 0 0 0-2.11 2.11C0 7.843 0 12 0 12s0 4.157.502 5.814a2.99 2.99 0 0 0 2.11 2.11C4.269 20.4 12 20.4 12 20.4s7.731 0 9.388-.476a2.99 2.99 0 0 0 2.11-2.11C24 16.157 24 12 24 12s0-4.157-.502-5.814zM9.75 15.569V8.431L15.818 12 9.75 15.569z" />
+                            </svg>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="footer-section">
+                    <h4>PRODUCTS</h4>
+                    <a href="#">Air Jordan</a>
+                    <a href="#">Air Max</a>
+                    <a href="#">Air Force</a>
+                    <a href="#">Basketball</a>
+                    <a href="#">Running</a>
+                </div>
+                <div class="footer-section">
+                    <h4>SUPPORT</h4>
+                    <a href="#">Size Chart</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Shipping</a>
+                    <a href="#">Contact</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer-section">
+                    <h4>COMPANY</h4>
+                    <a href="#">About Nike</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Sustainability</a>
+                    <a href="#">Innovation</a>
+                    <a href="#">Investors</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nike, Inc. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">CA Privacy Rights</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
